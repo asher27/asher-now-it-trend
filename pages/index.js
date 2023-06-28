@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from "next/link";
 import Date from '../components/Date';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await fetch('http://localhost:3000/api/posts');
   const { allPostsData } = await response.json();
   return {
